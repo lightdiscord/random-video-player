@@ -1,6 +1,4 @@
-#import <Foundation/Foundation.h>
 #import <ScreenSaver/ScreenSaver.h>
-#import <WebKit/WebKit.h>
 
 #define CASE_COMMAND(key, value) case key: \
     command = value; \

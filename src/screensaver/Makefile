@@ -1,4 +1,5 @@
-LDFLAGS = -framework Cocoa -framework ScreenSaver -framework WebKit
+LDFLAGS = -bundle -framework Carbon -framework ScreenSaver -framework WebKit
+CFLAGS = -Wall -Wextra
 
 OUT_FILES =
 OUT_FILES += out/MediaScreenSaver.saver/Contents/MacOS/MediaScreenSaver
@@ -8,7 +9,7 @@ all: $(OUT_FILES)
 
 out/MediaScreenSaver.saver/Contents/MacOS/MediaScreenSaver: MediaScreenSaverView.m
 	mkdir -p $(dir $@)
-	$(CC) -bundle $^ $(LDFLAGS) -o $@
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
 
 out/MediaScreenSaver.saver/Contents/Info.plist:
 	mkdir -p $(dir $@)
