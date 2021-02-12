@@ -20,7 +20,7 @@ function shuffle(array) {
 }
 
 async function fetchLinks() {
-	const response = await fetch("./medias.json");
+	const response = await fetch("./medias.json", { cache: "no-store" });
 	return response.json();
 };
 
